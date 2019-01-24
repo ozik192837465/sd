@@ -1,5 +1,7 @@
 body{
   background: #ffd7a1;
+  margin: 0;
+  padding: 0;
 }
 .page{
 }
@@ -327,11 +329,13 @@ ul li {
   flex-direction: row;
   background: #f9f9f9;
   width: 97.9%;
-  margin-left: 2.7%;
-  margin-right: 7%;
+  margin-left: 2.7%;margin-right: 0px;
   padding-top: 20px;
   position: relative;
   top:-10px;
+  box-sizing: border-box; /* Изменения алгоритма расчета ширины и высоты элемента.*/
+   -moz-box-sizing: border-box; /* Для Firefox */
+   -webkit-box-sizing: border-box; /* Для Safari, Chrome, iOS иAndroid */
 }
 .left-column-menu{
   width: 21%;
@@ -669,3 +673,27 @@ ul li {
 .f-3-2,.f-3-3{
   margin-left: 10%;
 }
+
+
+@media screen and (min-width: 1440px) and (max-width: 1599px){
+    body {
+        min-width: 112%;
+        margin-top: 10px;
+        margin: 0px;
+        padding-right: 0px;
+    }
+  }
+  @media screen and (min-width: 1279px) and (max-width: 1439px){
+      body {
+          min-width: 126.5%;
+          margin: 0px;
+          padding-right: 0px;
+      }
+    }
+    @media screen and (min-width: 1023px) and (max-width: 1100px){
+        body {
+            min-width: 156%;
+            margin: 0px;
+            padding-right: 0px;
+        }
+      }
